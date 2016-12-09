@@ -1,0 +1,27 @@
+﻿<Window x:Class="CharCreator.StartupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="StartupWindow" Height="500.0" Width="400.0">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="NewCharacterButton" Grid.Row="0" Content="Create New Character" HorizontalAlignment="Center" Height="40"
+                Margin="0,24,0,0" VerticalAlignment="Top" Width="Auto"  Click="NewCharacterButton_Click"/>
+        <Button x:Name="LoadCharacterButton" Grid.Row="1" Content="Load Character" HorizontalAlignment="Center" Height="40"
+                Margin="0,24,0,0" VerticalAlignment="Top" Width="Auto"  Click="LoadCharacterButton_Click"/>
+        <Button x:Name="SaveCharacterButton" Grid.Row="2" Content="Save Character" HorizontalAlignment="Center" Height="40"
+                Margin="0,24,0,0" VerticalAlignment="Top" Width="Auto"  Click="SaveCharacterButton_Click"/>
+        <Button x:Name="EditCharacterButton" Grid.Row="3" Content="Edit Character" HorizontalAlignment="Center" Height="40"
+                Margin="0,24,0,0" VerticalAlignment="Top" Width="Auto"  Click="EditCharacterButton_Click"/>
+    </Grid>
+</Window>

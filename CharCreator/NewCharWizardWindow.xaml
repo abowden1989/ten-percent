@@ -1,0 +1,28 @@
+﻿<Window x:Class="CharCreator.NewCharWizardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:wizardPages="clr-namespace:CharCreater.WizardPages"
+        xmlns:wizardPages1="clr-namespace:CharCreator.WizardPages"
+        mc:Ignorable="d"
+        Title="NewCharWizardWindow" Height="500" Width="400">
+    <Grid>
+        <xctk:Wizard FinishButtonClosesWindow="True">
+            <xctk:WizardPage x:Name="IntroPage" 
+                                   Title="Welcome to 5e Character Creator"
+                                   Description="This Wizard walk you through creating a character."
+                                   NextPage="{Binding ElementName=CharDetailsPage}"/>
+            <wizardPages1:CharDetailsWizardPage x:Name="CharDetailsPage" PageType="Interior"
+                                   Title="Character Details"
+                                   Description="Please enter character details."
+                                   NextPage="{Binding ElementName=CharAttributesPage}"
+                                   CanSelectNextPage="False"/>
+            <wizardPages:CharAttributesWizardPage x:Name="CharAttributesPage" PageType="Interior"
+                                   Title="Character Attributes"
+                                   Description="Please enter character attributes."
+                                   CanFinish="True"/>
+        </xctk:Wizard>
+    </Grid>
+</Window>
