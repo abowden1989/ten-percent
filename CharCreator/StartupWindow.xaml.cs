@@ -1,9 +1,11 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
+using System.Runtime.Serialization;
 using System.Windows;
 using System.Xml;
-using System.Xml.Serialization;
 using CharCreater.WizardPages;
+using CharCreator.Names;
 using CharCreator.OtherPages;
 
 namespace CharCreator
@@ -11,9 +13,10 @@ namespace CharCreator
     /// <summary>
     /// Interaction logic for StartupWindow.xaml
     /// </summary>
+
     public partial class StartupWindow
     {
-        private PlayerCharacter _playerCharacter;
+        private IPlayerCharacter _playerCharacter;
         public StartupWindow()
         {
             InitializeComponent();
@@ -23,11 +26,11 @@ namespace CharCreator
         {
             var newCharWindow = new NewCharWizardWindow();
             newCharWindow.ShowDialog();
-            _playerCharacter = new PlayerCharacter
-            {
-                PlayerName = newCharWindow.CharDetailsPage.CharacterName.Text,
-                Class = newCharWindow.CharDetailsPage.CharClass.Text
-            };
+
+            string Class = newCharWindow.CharDetailsPage.CharClass.Text;
+            _playerCharacter = (IPlayerCharacter) Activator.CreateInstance(AvailableClasses.ClassDictionary[Class]);
+
+            _playerCharacter.PlayerName = newCharWindow.CharDetailsPage.CharacterName.Text;
             var charAttributes = FillAttributeArray(newCharWindow.CharAttributesPage);
             _playerCharacter.SetAttributes(charAttributes);
         }
@@ -42,13 +45,18 @@ namespace CharCreator
 
             try
             {
+                var classTypes = AvailableClasses.ClassDictionary.Values.ToArray();
+                var serializer = new DataContractSerializer(typeof(PlayerCharacter), classTypes);
+
                 var fileName = _playerCharacter.PlayerName;
                 var filePath =
                     @"C:\Users\Adam.Bowden\Documents\Visual Studio 2015\Projects\CharCreator\CharCreator\bin\Debug\" +
                     fileName + ".xml";
-                var fw = XmlWriter.Create(filePath);
-                XmlSerializer serializer = new XmlSerializer(_playerCharacter.GetType());
-                serializer.Serialize(fw,_playerCharacter);
+                using (var fw = XmlWriter.Create(filePath))
+                {
+                    serializer.WriteObject(fw, (PlayerCharacter) _playerCharacter);
+                }
+
                 MessageBox.Show("Character saved");
             }
             catch (Exception ex)
@@ -74,13 +82,19 @@ namespace CharCreator
                     // Open document
                     filePath = dlg.FileName;
                 }
-                var serializer = new XmlSerializer(typeof (PlayerCharacter));
+
+                var classTypes = AvailableClasses.ClassDictionary.Values.ToArray();
+                var serializer = new DataContractSerializer(typeof(PlayerCharacter), classTypes);
+
                 var charFile = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 var buffer = new byte[charFile.Length];
-                charFile.Read(buffer, 0, (int) charFile.Length);
-                var stream = new MemoryStream(buffer);
-                _playerCharacter = (PlayerCharacter)serializer.Deserialize(stream);
+                charFile.Read(buffer, 0, (int)charFile.Length);
+                using (var stream = new MemoryStream(buffer))
+                {
+                    _playerCharacter = (IPlayerCharacter) serializer.ReadObject(stream);
+                }
                 MessageBox.Show("Character loaded");
+
             }
             catch (Exception ex)
             {

@@ -3,7 +3,7 @@
     public class EditCharacterDetails
     {
         public string PlayerName { get; set; }
-        public EditCharacterDetails(PlayerCharacter playerCharacter)
+        public EditCharacterDetails(IPlayerCharacter playerCharacter)
         {
             PlayerName = playerCharacter.PlayerName;
         }

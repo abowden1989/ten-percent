@@ -1,9 +1,10 @@
 ﻿namespace CharCreator
 {
-    public class PlayerCharacter
+    public abstract class PlayerCharacter : IPlayerCharacter
     {
-        public string PlayerName { get; set; }
         public string Class { get; set; }
+
+        public string PlayerName { get; set; }
 
         public int Strength { get; set; } = 10;
         public int Dexterity { get; set; } = 10;

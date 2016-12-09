@@ -23,7 +23,7 @@ namespace CharCreator.WizardPages
         private void ClassComboBox_Loaded(object sender, RoutedEventArgs e)
         {
             var classComboBox = sender as ComboBox;
-            classComboBox.ItemsSource = Enum.GetValues(typeof(ClassNames));
+            classComboBox.ItemsSource = Enum.GetValues(typeof(ClassName));
             classComboBox.SelectedIndex = 4;
         }
     }
