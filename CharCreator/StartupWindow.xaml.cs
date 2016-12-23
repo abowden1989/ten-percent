@@ -45,19 +45,32 @@ namespace CharCreator
 
             try
             {
-                var classTypes = AvailableClasses.ClassDictionary.Values.ToArray();
-                var serializer = new DataContractSerializer(typeof(PlayerCharacter), classTypes);
-
-                var fileName = _playerCharacter.PlayerName;
-                var filePath =
-                    @"C:\Users\Adam.Bowden\Documents\Visual Studio 2015\Projects\CharCreator\CharCreator\bin\Debug\" +
-                    fileName + ".xml";
-                using (var fw = XmlWriter.Create(filePath))
+                Microsoft.Win32.SaveFileDialog dlg = new Microsoft.Win32.SaveFileDialog
                 {
-                    serializer.WriteObject(fw, (PlayerCharacter) _playerCharacter);
-                }
+                    FileName = _playerCharacter.PlayerName, // Default file name
+                    DefaultExt = ".xml", // Default file extension
+                    Filter = "XML documents (.xml)|*.xml" // Filter files by extension
+                };
+                var result = dlg.ShowDialog();
 
-                MessageBox.Show("Character saved");
+                // Process open file dialog box results
+                if (result == true)
+                {
+                    // Open document
+                    var filePath = dlg.FileName;
+                    var classTypes = AvailableClasses.ClassDictionary.Values.ToArray();
+                    var serializer = new DataContractSerializer(typeof(PlayerCharacter), classTypes);
+
+                    using (var fw = XmlWriter.Create(filePath))
+                    {
+                        serializer.WriteObject(fw, (PlayerCharacter) _playerCharacter);
+                    }
+                    MessageBox.Show("Character saved");
+                }
+                else
+                {
+                    MessageBox.Show("Load cancelled");
+                }
             }
             catch (Exception ex)
             {
