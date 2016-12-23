@@ -82,31 +82,36 @@ namespace CharCreator
         {
             try
             {
-                string filePath = null;
-                Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-                dlg.FileName = "Document"; // Default file name
-                dlg.DefaultExt = ".xml"; // Default file extension
-                dlg.Filter = "XML documents (.xml)|*.xml"; // Filter files by extension
-                bool? result = dlg.ShowDialog();
+                Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog
+                {
+                    FileName = "Document", // Default file name
+                    DefaultExt = ".xml", // Default file extension
+                    Filter = "XML documents (.xml)|*.xml" // Filter files by extension
+                };
+
+                var result = dlg.ShowDialog();
 
                 // Process open file dialog box results
                 if (result == true)
                 {
                     // Open document
-                    filePath = dlg.FileName;
+                    var filePath = dlg.FileName;
+                    var classTypes = AvailableClasses.ClassDictionary.Values.ToArray();
+                    var serializer = new DataContractSerializer(typeof(PlayerCharacter), classTypes);
+
+                    var charFile = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                    var buffer = new byte[charFile.Length];
+                    charFile.Read(buffer, 0, (int) charFile.Length);
+                    using (var stream = new MemoryStream(buffer))
+                    {
+                        _playerCharacter = (IPlayerCharacter) serializer.ReadObject(stream);
+                    }
+                    MessageBox.Show("Character loaded");
                 }
-
-                var classTypes = AvailableClasses.ClassDictionary.Values.ToArray();
-                var serializer = new DataContractSerializer(typeof(PlayerCharacter), classTypes);
-
-                var charFile = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                var buffer = new byte[charFile.Length];
-                charFile.Read(buffer, 0, (int)charFile.Length);
-                using (var stream = new MemoryStream(buffer))
+                else
                 {
-                    _playerCharacter = (IPlayerCharacter) serializer.ReadObject(stream);
+                    MessageBox.Show("Load cancelled");
                 }
-                MessageBox.Show("Character loaded");
 
             }
             catch (Exception ex)
