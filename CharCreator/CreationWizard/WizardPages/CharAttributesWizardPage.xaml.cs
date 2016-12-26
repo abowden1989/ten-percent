@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace CharCreater.WizardPages
+namespace CharCreator.CreationWizard.WizardPages
 {
     /// <summary>
     /// Interaction logic for CharAttributesWizardPage.xaml

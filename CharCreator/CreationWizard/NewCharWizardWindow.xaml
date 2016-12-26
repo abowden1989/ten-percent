@@ -4,8 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-        xmlns:wizardPages="clr-namespace:CharCreater.WizardPages"
-        xmlns:wizardPages1="clr-namespace:CharCreator.WizardPages"
+        xmlns:wizardPages="clr-namespace:CharCreator.CreationWizard.WizardPages"
         mc:Ignorable="d"
         Title="NewCharWizardWindow" Height="500" Width="400">
     <Grid>
@@ -14,7 +13,7 @@
                                    Title="Welcome to 5e Character Creator"
                                    Description="This Wizard walk you through creating a character."
                                    NextPage="{Binding ElementName=CharDetailsPage}"/>
-            <wizardPages1:CharDetailsWizardPage x:Name="CharDetailsPage" PageType="Interior"
+            <wizardPages:CharDetailsWizardPage x:Name="CharDetailsPage" PageType="Interior"
                                    Title="Character Details"
                                    Description="Please enter character details."
                                    NextPage="{Binding ElementName=CharAttributesPage}"

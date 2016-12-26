@@ -4,9 +4,9 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Windows;
 using System.Xml;
-using CharCreater.WizardPages;
 using CharCreator.Classes;
 using CharCreator.CreationWizard;
+using CharCreator.CreationWizard.WizardPages;
 using CharCreator.OtherPages;
 using CharCreator.Races;
 

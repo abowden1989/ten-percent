@@ -1,4 +1,4 @@
-﻿<xctk:WizardPage x:Class="CharCreater.WizardPages.CharAttributesWizardPage"
+﻿<xctk:WizardPage x:Class="CharCreator.CreationWizard.WizardPages.CharAttributesWizardPage"
              x:Name="CharAttributes"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"

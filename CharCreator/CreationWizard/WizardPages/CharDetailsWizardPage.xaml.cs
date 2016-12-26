@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using CharCreator.Classes;
 using CharCreator.Races;
 
-namespace CharCreator.WizardPages
+namespace CharCreator.CreationWizard.WizardPages
 {
     /// <summary>
     /// Interaction logic for CharDetailsWizardPage.xaml
