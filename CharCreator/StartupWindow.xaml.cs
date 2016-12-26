@@ -8,6 +8,7 @@ using CharCreater.WizardPages;
 using CharCreator.Classes;
 using CharCreator.CreationWizard;
 using CharCreator.OtherPages;
+using CharCreator.Races;
 
 namespace CharCreator
 {
@@ -32,6 +33,8 @@ namespace CharCreator
             _playerCharacter = (IPlayerCharacter) Activator.CreateInstance(AvailableClasses.ClassDictionary[Class]);
 
             _playerCharacter.PlayerName = newCharWindow.CharDetailsPage.CharacterName.Text;
+            _playerCharacter.Race = (RaceName) newCharWindow.CharDetailsPage.CharRace.SelectionBoxItem;
+
             var charAttributes = FillAttributeArray(newCharWindow.CharAttributesPage);
             _playerCharacter.SetAttributes(charAttributes);
         }

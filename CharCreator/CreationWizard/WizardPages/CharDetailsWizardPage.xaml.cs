@@ -27,6 +27,12 @@ namespace CharCreator.WizardPages
             classComboBox.ItemsSource = Enum.GetValues(typeof(ClassName));
             classComboBox.SelectedIndex = 0;
         }
+
+        private void RaceComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            var raceComboBox = sender as ComboBox;
+            raceComboBox.ItemsSource = Enum.GetValues(typeof(RaceName));
+            raceComboBox.SelectedIndex = 0;
         }
     }
 }
