@@ -19,6 +19,7 @@ namespace CharCreator
     public partial class StartupWindow
     {
         private IPlayerCharacter _playerCharacter;
+
         public StartupWindow()
         {
             InitializeComponent();
