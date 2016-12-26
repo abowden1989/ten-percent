@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="Races\Elf.cs" />
     <Compile Include="Races\Human.cs" />
+    <Compile Include="Races\IRace.cs" />
     <Compile Include="Races\RaceName.cs" />
     <Compile Include="StartupWindow.xaml.cs">
       <DependentUpon>StartupWindow.xaml</DependentUpon>

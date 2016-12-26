@@ -1,6 +1,7 @@
 ﻿namespace CharCreator.Races
 {
-    public static class Elf
+    public class Elf : IRace
     {
+        public int RaceSpeed => 6;
     }
 }

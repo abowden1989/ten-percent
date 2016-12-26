@@ -17,6 +17,8 @@ namespace CharCreator.Classes
         int Wisdom { get; set; }
         int Charisma { get; set; }
 
+        int Speed { get; }
+
         void SetAttributes(int[] attributeArray);
     }
 }
