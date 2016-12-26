@@ -21,22 +21,22 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Text="Strength:" Margin="0 0 10 10"/>
+        <TextBlock Grid.Row="0" Text="BaseStr:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "0" Grid.Column="1"  Name="CharStrength" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="AttComboBox_Loaded"/>
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Dexterity:" Margin="0 0 10 10"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="BaseDex:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "1" Grid.Column="1" Name="CharDexterity" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="AttComboBox_Loaded"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Constitution:" Margin="0 0 10 10"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="BaseCon:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "2" Grid.Column="1" Name="CharConstitution" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="AttComboBox_Loaded"/>
-        <TextBlock Grid.Row="3" Grid.Column="0" Text="Intelligence:" Margin="0 0 10 10"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="BaseInt:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "3" Grid.Column="1" Name="CharIntelligence" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="AttComboBox_Loaded"/>
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Wisdom:" Margin="0 0 10 10"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="BaseWis:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "4" Grid.Column="1" Name="CharWisdom" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="AttComboBox_Loaded"/>
-        <TextBlock Grid.Row="5" Grid.Column="0" Text="Charisma:" Margin="0 0 10 10"/>
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="BaseCha:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "5" Grid.Column="1" Name="CharCharisma" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="AttComboBox_Loaded"/>
     </Grid>

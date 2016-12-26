@@ -1,4 +1,5 @@
-﻿using CharCreator.Races;
+﻿using System.Security.Cryptography.X509Certificates;
+using CharCreator.Races;
 
 namespace CharCreator.Classes
 {
@@ -10,13 +11,13 @@ namespace CharCreator.Classes
 
         string PlayerName { get; set; }
 
-        int Strength { get; set; }
-        int Dexterity { get; set; }
-        int Constitution { get; set; }
-        int Intelligence { get; set; }
-        int Wisdom { get; set; }
-        int Charisma { get; set; }
-
+        int Strength();
+        int Dexterity();
+        int Constitution();
+        int Intelligence();
+        int Wisdom();
+        int Charisma();
+ 
         int Speed { get; }
 
         void SetAttributes(int[] attributeArray);

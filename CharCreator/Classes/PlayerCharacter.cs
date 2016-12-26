@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using CharCreator.Races;
 
 namespace CharCreator.Classes
@@ -11,35 +10,63 @@ namespace CharCreator.Classes
 
         public string PlayerName { get; set; }
 
-        public int Strength { get; set; } = 10;
-        public int Dexterity { get; set; } = 10;
-        public int Constitution { get; set; } = 10;
-        public int Intelligence { get; set; } = 10;
-        public int Wisdom { get; set; } = 10;
-        public int Charisma { get; set; } = 10;
+        internal int BaseStr;
+        internal int BaseDex;
+        internal int BaseCon;
+        internal int BaseInt;
+        internal int BaseWis;
+        internal int BaseCha;
 
-        public int Speed
+        public int Strength()
         {
-            get
-            {
-                var race = (IRace) Activator.CreateInstance(AvailableRaces.RaceDictionary[Race]); //TODO: wtf is the right way to do this?
-                return race.RaceSpeed;
-            }
+            return BaseStr + GetRaceInstance().StrBonus;
         }
+
+        public int Dexterity()
+        {
+            return BaseDex + GetRaceInstance().DexBonus;
+        }
+
+        public int Constitution()
+        {
+            return BaseCon + GetRaceInstance().ConBonus;
+        }
+
+        public int Intelligence()
+        {
+            return BaseInt + GetRaceInstance().IntBonus;
+        }
+
+        public int Wisdom()
+        {
+            return BaseWis + GetRaceInstance().WisBonus;
+        }
+
+        public int Charisma()
+        {
+            return BaseCha + GetRaceInstance().ChaBonus;
+        }
+
+        public int Speed => GetRaceInstance().RaceSpeed;
 
         public void SetAttributes(int[] attributeArray)
         {
             if (attributeArray.Length != 6)
             {
-                throw new System.ArgumentException("Wrong number of parameters");
+                throw new ArgumentException("Wrong number of parameters");
             }
 
-            Strength = attributeArray[0];
-            Dexterity = attributeArray[1];
-            Constitution = attributeArray[2];
-            Intelligence = attributeArray[3];
-            Wisdom = attributeArray[4];
-            Charisma = attributeArray[5];
+            BaseStr = attributeArray[0];
+            BaseDex = attributeArray[1];
+            BaseCon = attributeArray[2];
+            BaseInt = attributeArray[3];
+            BaseWis = attributeArray[4];
+            BaseCha = attributeArray[5];
+        }
+
+        public IRace GetRaceInstance()
+        {
+            return (IRace)Activator.CreateInstance(AvailableRaces.RaceDictionary[Race]); //TODO: wtf is the right way to do this?
         }
     }
 }
