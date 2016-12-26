@@ -115,6 +115,7 @@
     <Compile Include="CreationWizard\WizardPages\CharDetailsWizardPage.xaml.cs">
       <DependentUpon>CharDetailsWizardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Races\Dwarf.cs" />
     <Compile Include="Races\Elf.cs" />
     <Compile Include="Races\Human.cs" />
     <Compile Include="Races\IRace.cs" />
