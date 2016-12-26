@@ -1,8 +1,12 @@
-﻿namespace CharCreator
+﻿using CharCreator.Races;
+
+namespace CharCreator.Classes
 {
     public interface IPlayerCharacter
     {
-        string Class { get; }
+        ClassName Class { get; }
+
+        RaceName Race { get; set; }
 
         string PlayerName { get; set; }
 

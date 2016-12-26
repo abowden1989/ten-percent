@@ -5,7 +5,8 @@ using System.Runtime.Serialization;
 using System.Windows;
 using System.Xml;
 using CharCreater.WizardPages;
-using CharCreator.Names;
+using CharCreator.Classes;
+using CharCreator.CreationWizard;
 using CharCreator.OtherPages;
 
 namespace CharCreator
@@ -27,7 +28,7 @@ namespace CharCreator
             var newCharWindow = new NewCharWizardWindow();
             newCharWindow.ShowDialog();
 
-            string Class = newCharWindow.CharDetailsPage.CharClass.Text;
+            ClassName Class = (ClassName) newCharWindow.CharDetailsPage.CharClass.SelectionBoxItem;
             _playerCharacter = (IPlayerCharacter) Activator.CreateInstance(AvailableClasses.ClassDictionary[Class]);
 
             _playerCharacter.PlayerName = newCharWindow.CharDetailsPage.CharacterName.Text;

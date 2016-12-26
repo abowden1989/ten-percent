@@ -1,8 +1,11 @@
-﻿namespace CharCreator
+﻿using CharCreator.Races;
+
+namespace CharCreator.Classes
 {
     public abstract class PlayerCharacter : IPlayerCharacter
     {
-        public string Class { get; set; }
+        public ClassName Class { get; set; }
+        public RaceName Race { get; set; }
 
         public string PlayerName { get; set; }
 

@@ -102,14 +102,14 @@
     </Compile>
     <Compile Include="Classes\Fighter.cs" />
     <Compile Include="Classes\Wizard.cs" />
-    <Compile Include="IPlayerCharacter.cs" />
-    <Compile Include="Names\ClassName.cs" />
+    <Compile Include="Classes\IPlayerCharacter.cs" />
+    <Compile Include="Classes\ClassName.cs" />
     <Compile Include="OtherPages\EditCharacterDetails.cs" />
     <Compile Include="OtherPages\EditCharWindow.xaml.cs">
       <DependentUpon>EditCharWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PlayerCharacter.cs" />
-    <Compile Include="WizardPages\CharAttributesWizardPage.xaml.cs">
+    <Compile Include="Classes\PlayerCharacter.cs" />
+    <Compile Include="CreationWizard\WizardPages\CharAttributesWizardPage.xaml.cs">
       <DependentUpon>CharAttributesWizardPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WizardPages\CharDetailsWizardPage.xaml.cs">

@@ -4,7 +4,7 @@
     {
         public Fighter()
         {
-            Class = "Fighter";
+            Class = ClassName.Fighter;
         }
     }
 }

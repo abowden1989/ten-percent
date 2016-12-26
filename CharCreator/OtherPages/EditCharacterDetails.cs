@@ -1,4 +1,6 @@
-﻿namespace CharCreator.OtherPages
+﻿using CharCreator.Classes;
+
+namespace CharCreator.OtherPages
 {
     public class EditCharacterDetails
     {

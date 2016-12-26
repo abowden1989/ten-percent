@@ -4,7 +4,7 @@
     {
         public Wizard()
         {
-            Class = "Wizard";
+            Class = ClassName.Wizard;
         }
     }
 }
