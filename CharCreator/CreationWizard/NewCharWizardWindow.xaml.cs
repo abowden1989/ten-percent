@@ -1,4 +1,4 @@
-﻿namespace CharCreator
+﻿namespace CharCreator.CreationWizard
 {
     /// <summary>
     /// Interaction logic for NewCharWizard.xaml

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using CharCreator.Names;
+using CharCreator.Classes;
+using CharCreator.Races;
 
 namespace CharCreator.WizardPages
 {
@@ -15,7 +16,7 @@ namespace CharCreator.WizardPages
             InitializeComponent();
         }
 
-        private void CharacterNameTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        private void CharName_OnTextChanged(object sender, TextChangedEventArgs e)
         {
             CharDetails.CanSelectNextPage = !string.IsNullOrEmpty(CharacterName.Text);
         }
@@ -24,7 +25,8 @@ namespace CharCreator.WizardPages
         {
             var classComboBox = sender as ComboBox;
             classComboBox.ItemsSource = Enum.GetValues(typeof(ClassName));
-            classComboBox.SelectedIndex = 4;
+            classComboBox.SelectedIndex = 0;
+        }
         }
     }
 }

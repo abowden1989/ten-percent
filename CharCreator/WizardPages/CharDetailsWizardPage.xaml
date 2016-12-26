@@ -15,11 +15,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Name:" Margin="0 0 10 10"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Name="CharacterName" TextChanged="CharacterNameTextBox_OnTextChanged" Margin="0 0 0 10"/>
-        <TextBlock Grid.Row="1" Text="Class:" Margin="0 0 10 10"/>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Margin="0 0 10 10"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="CharacterName" TextChanged="CharName_OnTextChanged" Margin="0 0 0 10"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Class:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "1" Grid.Column="1"  Name="CharClass" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="ClassComboBox_Loaded"/>
     </Grid>
