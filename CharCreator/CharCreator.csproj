@@ -80,6 +80,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Races\MountainDwarf.cs" />
     <Compile Include="Talents\Language.cs" />
     <Compile Include="Talents\WeaponProficiencies.cs" />
     <Page Include="CreationWizard\WizardPages\CharRaceWizardPage.xaml">
@@ -125,7 +126,7 @@
     <Compile Include="CreationWizard\WizardPages\CharDetailsWizardPage.xaml.cs">
       <DependentUpon>CharDetailsWizardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Races\Dwarf.cs" />
+    <Compile Include="Races\HillDwarf.cs" />
     <Compile Include="Races\Elf.cs" />
     <Compile Include="Races\Human.cs" />
     <Compile Include="Races\IRace.cs" />

@@ -5,7 +5,8 @@ namespace CharCreator.Races
 {
     public enum RaceName
     {
-        Dwarf,
+        HillDwarf,
+        MountainDwarf,
         Elf,
         Human,
     }
@@ -14,7 +15,8 @@ namespace CharCreator.Races
     {
         public static Dictionary<RaceName, Type> RaceDictionary = new Dictionary<RaceName, Type>
         {
-            {RaceName.Dwarf, typeof(Dwarf)},
+            {RaceName.HillDwarf, typeof(HillDwarf)},
+            {RaceName.MountainDwarf, typeof(MountainDwarf)},
             {RaceName.Elf, typeof(Elf)},
             {RaceName.Human, typeof(Human)},
         };
