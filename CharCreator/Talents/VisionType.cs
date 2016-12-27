@@ -1,4 +1,4 @@
-﻿namespace CharCreator.Races
+﻿namespace CharCreator.Talents
 {
     public enum VisionType
     {

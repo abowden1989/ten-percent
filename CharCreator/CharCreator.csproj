@@ -130,7 +130,7 @@
     <Compile Include="Races\Human.cs" />
     <Compile Include="Races\IRace.cs" />
     <Compile Include="Races\RaceName.cs" />
-    <Compile Include="Races\VisionType.cs" />
+    <Compile Include="Talents\VisionType.cs" />
     <Compile Include="StartupWindow.xaml.cs">
       <DependentUpon>StartupWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
