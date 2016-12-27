@@ -1,4 +1,7 @@
-﻿namespace CharCreator.Races
+﻿using System.Collections.Generic;
+using CharCreator.Feats;
+
+namespace CharCreator.Races
 {
     internal class Dwarf : IRace
     {
@@ -12,5 +15,7 @@
         public int ChaBonus => 0;
 
         public VisionType Vision => VisionType.Darkvision;
+        public IEnumerable<FeatName> RacialFeats => new List<FeatName> {FeatName.DwarvenResilience};
+
     }
 }

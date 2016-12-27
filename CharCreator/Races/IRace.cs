@@ -1,4 +1,7 @@
-﻿namespace CharCreator.Races
+﻿using System.Collections.Generic;
+using CharCreator.Feats;
+
+namespace CharCreator.Races
 {
     public interface IRace
     {
@@ -12,6 +15,8 @@
         int ChaBonus { get; }
 
         VisionType Vision { get; }
+
+        IEnumerable<FeatName> RacialFeats { get; }
 
     }
 }

@@ -111,6 +111,7 @@
     <Compile Include="CreationWizard\WizardPages\CharRaceWizardPage.xaml.cs">
       <DependentUpon>CharRaceWizardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Feats\AvailableFeats.cs" />
     <Compile Include="OtherPages\EditCharacterDetails.cs" />
     <Compile Include="OtherPages\EditCharWindow.xaml.cs">
       <DependentUpon>EditCharWindow.xaml</DependentUpon>

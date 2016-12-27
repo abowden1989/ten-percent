@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Collections.Generic;
+using CharCreator.Feats;
 using CharCreator.Races;
 
 namespace CharCreator.Classes
@@ -20,6 +21,8 @@ namespace CharCreator.Classes
  
         int Speed { get; }
         VisionType Vision { get; }
+
+        IEnumerable<FeatName> Feats();
 
         void SetAttributes(int[] attributeArray);
     }

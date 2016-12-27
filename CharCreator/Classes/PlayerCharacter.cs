@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using CharCreator.Feats;
 using CharCreator.Races;
 
 namespace CharCreator.Classes
@@ -49,6 +51,11 @@ namespace CharCreator.Classes
 
         public int Speed => GetRaceInstance().RaceSpeed;
         public VisionType Vision => GetRaceInstance().Vision;
+
+        public IEnumerable<FeatName> Feats()
+        {
+            return GetRaceInstance().RacialFeats;
+        }
 
         public void SetAttributes(int[] attributeArray)
         {

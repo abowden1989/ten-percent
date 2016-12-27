@@ -1,4 +1,7 @@
-﻿namespace CharCreator.Races
+﻿using System.Collections.Generic;
+using CharCreator.Feats;
+
+namespace CharCreator.Races
 {
     public class Human : IRace
     {
@@ -12,5 +15,6 @@
         public int ChaBonus => 0;
 
         public VisionType Vision => VisionType.Normal;
+        public IEnumerable<FeatName> RacialFeats => new List<FeatName> {};
     }
 }
