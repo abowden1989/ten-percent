@@ -81,6 +81,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Races\MountainDwarf.cs" />
+    <Compile Include="Talents\ArmorProficiencies.cs" />
     <Compile Include="Talents\Language.cs" />
     <Compile Include="Talents\WeaponProficiencies.cs" />
     <Page Include="CreationWizard\WizardPages\CharRaceWizardPage.xaml">

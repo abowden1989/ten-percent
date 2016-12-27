@@ -67,6 +67,11 @@ namespace CharCreator.Classes
             return GetRaceInstance().RacialWeaponProficiencies;
         }
 
+        public IEnumerable<ArmorProficiency> ArmorProficiencies()
+        {
+            return GetRaceInstance().RacialArmorProficiencies;
+        }
+
         public IEnumerable<Language> Languages()
         {
             return GetRaceInstance().RacialLanguages;

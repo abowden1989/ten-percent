@@ -7,7 +7,7 @@ namespace CharCreator.Races
     {
         public int RaceSpeed => 5;
 
-        public int StrBonus => 0;
+        public int StrBonus => 2;
         public int DexBonus => 0;
         public int ConBonus => 2;
         public int IntBonus => 0;
@@ -24,6 +24,12 @@ namespace CharCreator.Races
             WeaponProficiency.HandAxe,
             WeaponProficiency.ThrowingHammer,
             WeaponProficiency.WarHammer,
+        };
+
+        public IEnumerable<ArmorProficiency> RacialArmorProficiencies => new List<ArmorProficiency>
+        {
+            ArmorProficiency.Light,
+            ArmorProficiency.Medium,
         };
 
         public IEnumerable<Language> RacialLanguages => new List<Language>

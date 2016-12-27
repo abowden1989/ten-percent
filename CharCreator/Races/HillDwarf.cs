@@ -30,6 +30,8 @@ namespace CharCreator.Races
             WeaponProficiency.WarHammer,
         };
 
+        public IEnumerable<ArmorProficiency> RacialArmorProficiencies => new List<ArmorProficiency> {};
+
         public IEnumerable<Language> RacialLanguages => new List<Language>
         {
             Language.Common,
