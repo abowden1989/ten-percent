@@ -18,8 +18,11 @@ namespace CharCreator.Classes
         int Intelligence();
         int Wisdom();
         int Charisma();
+
+        int Hitpoints();
  
         int Speed { get; }
+
         VisionType Vision { get; }
 
         IEnumerable<FeatName> Feats();

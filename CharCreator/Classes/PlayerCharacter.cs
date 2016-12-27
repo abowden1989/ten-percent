@@ -49,6 +49,11 @@ namespace CharCreator.Classes
             return BaseCha + GetRaceInstance().ChaBonus;
         }
 
+        public int Hitpoints()
+        {
+            return 0; //TODO: Implement - ensure feats are used (e.g. DwarvenToughness)
+        }
+
         public int Speed => GetRaceInstance().RaceSpeed;
         public VisionType Vision => GetRaceInstance().Vision;
 
