@@ -62,6 +62,11 @@ namespace CharCreator.Classes
             return GetRaceInstance().RacialWeaponProficiencies;
         }
 
+        public IEnumerable<Language> Languages()
+        {
+            return GetRaceInstance().RacialLanguages;
+        }
+
         public void SetAttributes(int[] attributeArray)
         {
             if (attributeArray.Length != 6)

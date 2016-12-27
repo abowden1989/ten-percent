@@ -26,6 +26,8 @@ namespace CharCreator.Classes
 
         IEnumerable<WeaponProficiency> WeaponProficiencies();
 
+        IEnumerable<Language> Languages();
+
         void SetAttributes(int[] attributeArray);
     }
 }

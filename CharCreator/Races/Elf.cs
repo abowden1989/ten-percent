@@ -19,5 +19,7 @@ namespace CharCreator.Races
         public IEnumerable<FeatName> RacialFeats => new List<FeatName> {};
 
         public IEnumerable<WeaponProficiency> RacialWeaponProficiencies => new List<WeaponProficiency> {};
+
+        public IEnumerable<Language> RacialLanguages => new List<Language> {};
     }
 }

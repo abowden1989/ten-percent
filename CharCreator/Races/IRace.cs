@@ -21,5 +21,7 @@ namespace CharCreator.Races
         IEnumerable<WeaponProficiency> RacialWeaponProficiencies { get; }
         //TODO: Add tool proficiencies
 
+        IEnumerable<Language> RacialLanguages { get; }
+
     }
 }
