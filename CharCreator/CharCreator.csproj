@@ -80,6 +80,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CreationWizard\WizardPages\CharRaceWizardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="OtherPages\EditCharWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +108,9 @@
     <Compile Include="Classes\Wizard.cs" />
     <Compile Include="Classes\IPlayerCharacter.cs" />
     <Compile Include="Classes\ClassName.cs" />
+    <Compile Include="CreationWizard\WizardPages\CharRaceWizardPage.xaml.cs">
+      <DependentUpon>CharRaceWizardPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OtherPages\EditCharacterDetails.cs" />
     <Compile Include="OtherPages\EditCharWindow.xaml.cs">
       <DependentUpon>EditCharWindow.xaml</DependentUpon>

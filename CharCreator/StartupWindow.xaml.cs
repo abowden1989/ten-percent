@@ -34,10 +34,11 @@ namespace CharCreator
             _playerCharacter = (IPlayerCharacter) Activator.CreateInstance(AvailableClasses.ClassDictionary[Class]);
 
             _playerCharacter.PlayerName = newCharWindow.CharDetailsPage.CharacterName.Text;
-            _playerCharacter.Race = (RaceName) newCharWindow.CharDetailsPage.CharRace.SelectionBoxItem;
 
             var charAttributes = FillAttributeArray(newCharWindow.CharAttributesPage);
             _playerCharacter.SetAttributes(charAttributes);
+
+            _playerCharacter.Race = (RaceName)newCharWindow.CharRacePage.CharRace.SelectionBoxItem;
         }
 
         private void SaveCharacterButton_Click(object sender, RoutedEventArgs e)

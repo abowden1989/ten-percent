@@ -15,7 +15,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="Name:" Margin="0 0 10 10"/>
@@ -23,8 +22,5 @@
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Class:" Margin="0 0 10 10"/>
         <ComboBox Grid.Row = "1" Grid.Column="1"  Name="CharClass" HorizontalAlignment="Left" Margin="0 0 0 10"
 	        VerticalAlignment="Top" Width="Auto" Loaded="ClassComboBox_Loaded"/>
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Race:" Margin="0 0 10 10"/>
-        <ComboBox Grid.Row = "2" Grid.Column="1"  Name="CharRace" HorizontalAlignment="Left" Margin="0 0 0 10"
-	        VerticalAlignment="Top" Width="Auto" Loaded="RaceComboBox_Loaded"/>
     </Grid>
 </xctk:WizardPage>

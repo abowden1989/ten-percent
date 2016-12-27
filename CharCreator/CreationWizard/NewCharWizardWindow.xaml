@@ -21,6 +21,10 @@
             <wizardPages:CharAttributesWizardPage x:Name="CharAttributesPage" PageType="Interior"
                                    Title="Character Attributes"
                                    Description="Please enter character attributes."
+                                   NextPage="{Binding ElementName=CharRacePage}"/>
+            <wizardPages:CharRaceWizardPage x:Name="CharRacePage" PageType="Interior"
+                                   Title="Character Attributes"
+                                   Description="Please choose a race."
                                    CanFinish="True"/>
         </xctk:Wizard>
     </Grid>
