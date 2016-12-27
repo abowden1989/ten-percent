@@ -11,6 +11,7 @@
         int WisBonus { get; }
         int ChaBonus { get; }
 
+        VisionType Vision { get; }
 
     }
 }

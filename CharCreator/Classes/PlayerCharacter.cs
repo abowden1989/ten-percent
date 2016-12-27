@@ -48,6 +48,7 @@ namespace CharCreator.Classes
         }
 
         public int Speed => GetRaceInstance().RaceSpeed;
+        public VisionType Vision => GetRaceInstance().Vision;
 
         public void SetAttributes(int[] attributeArray)
         {

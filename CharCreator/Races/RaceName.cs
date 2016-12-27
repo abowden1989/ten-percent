@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using CharCreator.Classes;
 
 namespace CharCreator.Races
 {

@@ -19,6 +19,7 @@ namespace CharCreator.Classes
         int Charisma();
  
         int Speed { get; }
+        VisionType Vision { get; }
 
         void SetAttributes(int[] attributeArray);
     }

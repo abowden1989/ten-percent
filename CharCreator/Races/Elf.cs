@@ -10,5 +10,7 @@
         public int IntBonus => 0;
         public int WisBonus => 0;
         public int ChaBonus => 0;
+
+        public VisionType Vision => VisionType.Darkvision;
     }
 }
