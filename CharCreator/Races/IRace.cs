@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using CharCreator.Feats;
+using CharCreator.Talents;
 
 namespace CharCreator.Races
 {
@@ -17,6 +17,8 @@ namespace CharCreator.Races
         VisionType Vision { get; }
 
         IEnumerable<FeatName> RacialFeats { get; }
+
+        IEnumerable<WeaponProficiency> RacialWeaponProficiencies { get; }
 
     }
 }

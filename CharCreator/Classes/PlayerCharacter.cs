@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using CharCreator.Feats;
 using CharCreator.Races;
+using CharCreator.Talents;
 
 namespace CharCreator.Classes
 {
@@ -55,6 +55,11 @@ namespace CharCreator.Classes
         public IEnumerable<FeatName> Feats()
         {
             return GetRaceInstance().RacialFeats;
+        }
+
+        public IEnumerable<WeaponProficiency> WeaponProficiencies()
+        {
+            return GetRaceInstance().RacialWeaponProficiencies;
         }
 
         public void SetAttributes(int[] attributeArray)

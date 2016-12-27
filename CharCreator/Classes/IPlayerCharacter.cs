@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using CharCreator.Feats;
 using CharCreator.Races;
+using CharCreator.Talents;
 
 namespace CharCreator.Classes
 {
@@ -23,6 +23,8 @@ namespace CharCreator.Classes
         VisionType Vision { get; }
 
         IEnumerable<FeatName> Feats();
+
+        IEnumerable<WeaponProficiency> WeaponProficiencies();
 
         void SetAttributes(int[] attributeArray);
     }

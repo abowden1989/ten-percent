@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using CharCreator.Feats;
+using CharCreator.Talents;
 
 namespace CharCreator.Races
 {
@@ -15,7 +15,16 @@ namespace CharCreator.Races
         public int ChaBonus => 0;
 
         public VisionType Vision => VisionType.Darkvision;
+
         public IEnumerable<FeatName> RacialFeats => new List<FeatName> {FeatName.DwarvenResilience};
+
+        public IEnumerable<WeaponProficiency> RacialWeaponProficiencies => new List<WeaponProficiency>
+        {
+            WeaponProficiency.BattleAxe,
+            WeaponProficiency.HandAxe,
+            WeaponProficiency.ThrowingHammer,
+            WeaponProficiency.WarHammer,
+        };
 
     }
 }

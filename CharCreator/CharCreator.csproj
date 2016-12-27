@@ -80,6 +80,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Talents\WeaponProficiencies.cs" />
     <Page Include="CreationWizard\WizardPages\CharRaceWizardPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,7 +112,7 @@
     <Compile Include="CreationWizard\WizardPages\CharRaceWizardPage.xaml.cs">
       <DependentUpon>CharRaceWizardPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Feats\AvailableFeats.cs" />
+    <Compile Include="Talents\AvailableFeats.cs" />
     <Compile Include="OtherPages\EditCharacterDetails.cs" />
     <Compile Include="OtherPages\EditCharWindow.xaml.cs">
       <DependentUpon>EditCharWindow.xaml</DependentUpon>
