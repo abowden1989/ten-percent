@@ -19,6 +19,7 @@ namespace CharCreator.Races
         IEnumerable<FeatName> RacialFeats { get; }
 
         IEnumerable<WeaponProficiency> RacialWeaponProficiencies { get; }
+        //TODO: Add tool proficiencies
 
     }
 }
